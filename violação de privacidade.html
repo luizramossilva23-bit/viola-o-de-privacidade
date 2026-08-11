@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="pt-BR"><head><script>window["__codeletBootstrap__"]=JSON.parse('{"A":"A","B":"20260811-05-f555caa","C":{"Abril Fatface":"YACgEZbkUVE,0","Alfa Slab One":"YACgEYS9sJU,0","Anton":"YACgEcYqQ-A,0","Archivo":"YAHO2-t-jNE,0","Arial":"YAGyDvJ_4Ts,0","Bebas Neue":"YACgESME5ew,0","Bricolage Grotesque":"YAFyMcdwzpc,0","Canva Sans":"YAFLd8sKbwc,2","Caveat":"YALBs2ploWQ,0","Comic Sans MS":"YAHO2VMiyZo,0","Cormorant Garamond":"YAFdJhX-538,0","Courier New":"YAGzXiGs0_8,0","DM Sans":"YAD1aU3sLnI,0","DM Serif Display":"YAD1aYG82rc,0","Forum":"YACgEcnnqB4,0","Fraunces":"YAEul-FRQw4,0","Georgia":"YAGzXkO0pEM,0","Helvetica Neue":"YAFcf6CtJfI,0","Impact":"YAFcfnjI7Vk,0","Inter":"YAFdJvSyp_k,3","Iowan Old Style":"YAGNIFa8j9o,0","Jacques Francois":"YAHO2a5g66Q,0","JetBrains Mono":"YAFdJksXcAk,0","Libre Baskerville":"YACgEUFdPdA,0","Manrope":"YAHO2b2feC4,0","Merriweather":"YACgEXvHxxs,0","Montserrat":"YADLjI9qxTA,0","Nunito":"YACgEX8C5Gg,0","Oleo Script":"YACgEQQ14jI,0","Phantom Sans":"YAHO2E8Pb88,0","Playfair Display":"YACgEYmuCJE,0","Poppins":"YAFdJjbTu24,1","Press Start 2P":"YAFyGr-8pmQ,0","Quicksand":"YADWjpfPmdk,0","Raleway":"YACgEVg3xZg,0","Segoe UI":"YAHNdRD1Klw,0","Source Sans 3":"YAG4lO1Mj10,0","Spectral":"YAHO2rVUHIM,0","Times New Roman":"YAGzXW3gftg,0","Times":"YAGzXW3gftg,0","Ubuntu":"YACgERDU--Q,0","Work Sans":"YAGXhLOKv44,0","Yellowtail":"YACgEYG4kG4,0","ui-monospace":"YADlN8CFZ8Q,0","ui-sans-serif":"YACkoN-xg4g,0"}}');</script><script src="/_sdk/7949ff62d67710d5.telemetry_sdk.js" integrity="sha512-KIvXA82Di44YY/RH9/63A9MuTuavYgDFG8PfErJn7Wli4K0LAOk+coo/aPXk3+ZNL96nHh9VYD4PE+fLes+laQ=="></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacidade Digital</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #081728;
+      --muted: #526271;
+      --line: rgba(8, 23, 40, 0.12);
+      --mint: #b9f5d0;
+      --sky: #c9e7ff;
+      --paper: #f5f7f4;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      width: 100%;
+      margin: 0;
+      font-family: "DM Sans", sans-serif;
+      color: var(--ink);
+    }
+
+    .shell {
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .top-rule {
+      height: 5px;
+      background: linear-gradient(90deg, #58d68d 0%, #67c6ed 48%, #f3d174 100%);
+    }
+
+    .hero-grid {
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
+    }
+
+    .hero-grid::before,
+    .hero-grid::after {
+      content: "";
+      position: absolute;
+      border: 1px solid rgba(185, 245, 208, 0.2);
+      border-radius: 999px;
+      z-index: -1;
+    }
+
+    .hero-grid::before {
+      width: 34rem;
+      height: 34rem;
+      right: -12rem;
+      top: -18rem;
+    }
+
+    .hero-grid::after {
+      width: 22rem;
+      height: 22rem;
+      left: -12rem;
+      bottom: -15rem;
+    }
+
+    .eyebrow {
+      font-family: "Space Mono", monospace;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .photo-frame {
+      position: relative;
+    }
+
+    .photo-frame::after {
+      content: "";
+      position: absolute;
+      width: 88%;
+      height: 88%;
+      right: -1rem;
+      bottom: -1rem;
+      border: 1px solid rgba(185, 245, 208, 0.55);
+      z-index: -1;
+    }
+
+    .signal-card,
+    .tip-row {
+      transition: transform 180ms ease, box-shadow 180ms ease;
+    }
+
+    .signal-card:hover,
+    .tip-row:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 32px rgba(8, 23, 40, 0.09);
+    }
+
+    .signal-icon {
+      width: 2.75rem;
+      height: 2.75rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 0.75rem;
+      background: #e5f5ec;
+      color: #146443;
+      flex: 0 0 auto;
+    }
+
+    .tip-number {
+      width: 2.4rem;
+      height: 2.4rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      font-family: "Space Mono", monospace;
+      font-size: 0.78rem;
+      font-weight: 700;
+      background: #b9f5d0;
+      color: #092b20;
+      flex: 0 0 auto;
+    }
+
+    .focus-ring:focus-visible {
+      outline: 3px solid #f3d174;
+      outline-offset: 4px;
+    }
+
+    @media (max-width: 640px) {
+      .photo-frame::after {
+        right: -0.5rem;
+        bottom: -0.5rem;
+      }
+    }
+  </style>
+  <script src="/_sdk/0e8d3a91e1c6f495.data_sdk.js" type="text/javascript" integrity="sha512-c00oDoGjsMgluCLLEyVl3suwEkgjOGGplVFbsilUoBg4aMKNmsL3mwsc9r0dPn95qiSZyjBousQXgROkAW7p/w=="></script>
+  <script src="/_sdk/04cc6185e046f597.resizing_sdk.js" type="text/javascript" integrity="sha512-CiE/G92aQF0nxneFg1kdOvXih8sQ1Z2a2QI3+r/WvzJwQqH6+IyB3iL07OkJmpm3ABAaf07+FnqWny98f5sR6w=="></script>
+ </head>
+ <body data-template-id="__page-root" style="background: rgb(245, 247, 244);">
+  <div class="shell">
+   <div class="top-rule" aria-hidden="true"></div>
+   <header class="w-full border-b border-white/10" style="background:#081728;">
+    <nav class="mx-auto flex max-w-6xl items-center justify-between px-5 py-5 sm:px-8" aria-label="Navegação principal"><a href="#inicio" class="focus-ring flex items-center gap-3 rounded-md no-underline"> <span class="flex h-9 w-9 items-center justify-center rounded-lg" style="background:#b9f5d0; color:#092b20;" aria-hidden="true"> <i data-lucide="shield-check" width="20" height="20"></i> </span> <span data-template-id="brand-name" class="canva-text font-semibold" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 16px;">Privacidade Digital</span> </a> <a href="#prevencao" data-template-id="nav-link" class="canva-link focus-ring rounded-md px-2 py-1 text-sm font-semibold no-underline" style="color: rgb(185, 245, 208); font-weight: 600; font-style: normal; font-size: 16px;">Como se prevenir</a>
+    </nav>
+   </header>
+   <main>
+    <section id="inicio" class="hero-grid w-full" style="background:#081728;">
+     <div class="mx-auto grid max-w-6xl items-center gap-12 px-5 py-16 sm:px-8 lg:grid-cols-[1.08fr_0.92fr] lg:py-24">
+      <div>
+       <p data-template-id="hero-eyebrow" class="canva-text eyebrow mb-5" style="color: rgb(185, 245, 208); font-weight: 700; font-style: normal; font-size: 12px; letter-spacing: 0.08rem;">Segurança começa com informação</p>
+       <h1 data-template-id="hero-title" class="canva-text max-w-3xl font-bold tracking-tight" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 32px; line-height: 1.05;">Sua privacidade é um direito. Proteja seus dados.</h1>
+       <p data-template-id="hero-description" class="canva-text mt-6 max-w-2xl text-lg leading-8" style="color: rgb(201, 215, 228); font-weight: 400; font-style: normal; font-size: 18px; line-height: 1.6;">Uma violação de privacidade acontece quando informações pessoais são acessadas, usadas ou compartilhadas sem a sua autorização.</p><a href="#prevencao" data-template-id="hero-button" class="canva-button focus-ring mt-8 inline-flex items-center gap-3 rounded-lg px-5 py-3.5 font-bold no-underline shadow-lg transition-transform hover:-translate-y-0.5" style="background: rgb(185, 245, 208); color: rgb(9, 43, 32); font-weight: 700; font-style: normal; font-size: 16px;">Ver práticas de prevenção</a>
+      </div>
+      <div class="photo-frame mx-auto w-full max-w-md"><img data-template-id="hero-image" loading="lazy" class="canva-image aspect-[4/5] w-full rounded-2xl object-cover shadow-2xl" src="https://images.pexels.com/photos/4973899/pexels-photo-4973899.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1280" alt="Laptop displaying a security lock icon on a table with a potted plant and clock.">
+       <div data-template-id="hero-image-label" class="canva-tag absolute bottom-5 left-5 rounded-lg px-4 py-3 text-sm font-semibold shadow-lg" style="background: rgb(255, 255, 255); color: rgb(8, 23, 40); font-weight: 700; font-style: normal; font-size: 16px;">Privacidade é proteção diária</div>
+      </div>
+     </div>
+    </section>
+    <section class="w-full" style="background:#f5f7f4;">
+     <div class="mx-auto max-w-6xl px-5 py-20 sm:px-8">
+      <div class="max-w-2xl">
+       <p data-template-id="signals-eyebrow" class="canva-text eyebrow mb-4" style="color: rgb(20, 100, 67); font-weight: 700; font-style: normal; font-size: 12px; letter-spacing: 0.08rem;">Fique atento</p>
+       <h2 data-template-id="signals-title" class="canva-text font-bold tracking-tight" style="color: rgb(8, 23, 40); font-weight: 700; font-style: normal; font-size: 24px; line-height: 1.12;">Quando sua privacidade pode estar em risco?</h2>
+       <p data-template-id="signals-description" class="canva-text mt-5 text-lg leading-8" style="color: rgb(82, 98, 113); font-weight: 400; font-style: normal; font-size: 18px; line-height: 1.6;">Nem toda invasão é evidente. Pequenos sinais podem indicar que uma conta ou informação pessoal foi exposta.</p>
+      </div>
+      <div class="mt-11 grid gap-5 md:grid-cols-3">
+       <article data-template-id="signal-card-one" class="canva-card signal-card rounded-2xl border p-6" style="border-color: rgba(8, 23, 40, 0.12); background: rgb(255, 255, 255);">
+        <div class="signal-icon">
+         <i data-lucide="mail-warning" width="22" height="22" aria-hidden="true"></i>
+        </div>
+        <h3 data-template-id="signal-one-title" class="canva-text mt-5 font-bold" style="color: rgb(8, 23, 40); font-weight: 700; font-style: normal; font-size: 19px;">Mensagens inesperadas</h3>
+        <p data-template-id="signal-one-text" class="canva-text mt-3 leading-7" style="color: rgb(82, 98, 113); font-weight: 400; font-style: normal; font-size: 16px; line-height: 1.65;">E-mails, avisos de compra ou redefinições de senha que você não solicitou merecem atenção imediata.</p>
+       </article>
+       <article data-template-id="signal-card-two" class="canva-card signal-card rounded-2xl border p-6" style="border-color: rgba(8, 23, 40, 0.12); background: rgb(255, 255, 255);">
+        <div class="signal-icon">
+         <i data-lucide="key-round" width="22" height="22" aria-hidden="true"></i>
+        </div>
+        <h3 data-template-id="signal-two-title" class="canva-text mt-5 font-bold" style="color: rgb(8, 23, 40); font-weight: 700; font-style: normal; font-size: 19px;">Acesso bloqueado</h3>
+        <p data-template-id="signal-two-text" class="canva-text mt-3 leading-7" style="color: rgb(82, 98, 113); font-weight: 400; font-style: normal; font-size: 16px; line-height: 1.65;">Perder o acesso a uma conta pode significar que a senha foi alterada por outra pessoa.</p>
+       </article>
+       <article data-template-id="signal-card-three" class="canva-card signal-card rounded-2xl border p-6" style="border-color: rgba(8, 23, 40, 0.12); background: rgb(255, 255, 255);">
+        <div class="signal-icon">
+         <i data-lucide="eye-off" width="22" height="22" aria-hidden="true"></i>
+        </div>
+        <h3 data-template-id="signal-three-title" class="canva-text mt-5 font-bold" style="color: rgb(8, 23, 40); font-weight: 700; font-style: normal; font-size: 19px;">Uso desconhecido dos seus dados</h3>
+        <p data-template-id="signal-three-text" class="canva-text mt-3 leading-7" style="color: rgb(82, 98, 113); font-weight: 400; font-style: normal; font-size: 16px; line-height: 1.65;">Perfis falsos, cadastros estranhos ou contatos usando seu nome são sinais importantes.</p>
+       </article>
+      </div>
+     </div>
+    </section>
+    <section class="w-full" style="background:#dceef6;">
+     <div class="mx-auto grid max-w-6xl items-center gap-10 px-5 py-16 sm:px-8 lg:grid-cols-2 lg:py-20"><img data-template-id="breach-image" loading="lazy" class="canva-image h-72 w-full rounded-2xl object-cover shadow-lg lg:h-96" src="https://images.pexels.com/photos/7534378/pexels-photo-7534378.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1280" alt="Man in shock discovering possible fraud or data breach with smartphone and credit card.">
+      <div>
+       <p data-template-id="impact-eyebrow" class="canva-text eyebrow mb-4" style="color: rgb(20, 100, 67); font-weight: 700; font-style: normal; font-size: 12px; letter-spacing: 0.08rem;">Se acontecer com você</p>
+       <h2 data-template-id="impact-title" class="canva-text font-bold tracking-tight" style="color: rgb(8, 23, 40); font-weight: 700; font-style: normal; font-size: 24px; line-height: 1.12;">Agir rápido reduz os impactos.</h2>
+       <p data-template-id="impact-description" class="canva-text mt-5 text-lg leading-8" style="color: rgb(49, 73, 90); font-weight: 400; font-style: normal; font-size: 18px; line-height: 1.6;">Troque suas senhas, avise serviços envolvidos e revise a atividade recente das suas contas. Se houver suspeita de fraude, entre em contato com a instituição responsável.</p>
+       <div data-template-id="impact-note" class="canva-banner mt-7 rounded-xl border-l-4 px-5 py-4 leading-7" style="border-color: rgb(20, 100, 67); background: rgb(255, 255, 255); color: rgb(22, 64, 84); font-weight: 600; font-style: normal; font-size: 16px;">Nunca compartilhe códigos de confirmação recebidos por SMS, e-mail ou aplicativos — empresas legítimas não pedem esses códigos por mensagem.</div>
+      </div>
+     </div>
+    </section>
+    <section id="prevencao" class="w-full" style="background:#ffffff;">
+     <div class="mx-auto max-w-6xl px-5 py-20 sm:px-8">
+      <div class="grid gap-10 lg:grid-cols-[0.78fr_1.22fr]">
+       <div class="lg:sticky lg:top-8 lg:self-start">
+        <p data-template-id="tips-eyebrow" class="canva-text eyebrow mb-4" style="color: rgb(20, 100, 67); font-weight: 700; font-style: normal; font-size: 12px; letter-spacing: 0.08rem;">Prevenção na prática</p>
+        <h2 data-template-id="tips-title" class="canva-text font-bold tracking-tight" style="color: rgb(8, 23, 40); font-weight: 700; font-style: normal; font-size: 24px; line-height: 1.12;">Seis hábitos que fortalecem a sua segurança</h2>
+        <p data-template-id="tips-description" class="canva-text mt-5 leading-8" style="color: rgb(82, 98, 113); font-weight: 400; font-style: normal; font-size: 16px; line-height: 1.65;">Não é preciso saber tudo sobre tecnologia: começar por estas ações já torna sua vida digital muito mais segura.</p><img data-template-id="protection-image" loading="lazy" class="canva-image mt-8 h-52 w-full rounded-2xl object-cover shadow-md" src="https://images.pexels.com/photos/5243610/pexels-photo-5243610.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" alt="A person using a VPN on a laptop, symbolizing secure internet browsing in a modern indoor setting.">
+       </div>
+       <div class="space-y-3">
+        <article data-template-id="tip-row-one" class="canva-card tip-row flex gap-5 rounded-xl border p-5" style="border-color: rgba(8, 23, 40, 0.12); background: rgb(255, 255, 255);"><span class="tip-number">01</span>
+         <div>
+          <h3 data-template-id="tip-one-title" class="canva-text font-bold" style="color: rgb(8, 23, 40); font-weight: 700; font-style: normal; font-size: 19px;">Use senhas únicas e longas</h3>
+          <p data-template-id="tip-one-text" class="canva-text mt-2 leading-7" style="color: rgb(82, 98, 113); font-weight: 400; font-style: normal; font-size: 16px; line-height: 1.65;">Evite repetir senhas. Combine palavras, números e símbolos ou use um gerenciador de senhas confiável.</p>
+         </div>
+        </article>
+        <article data-template-id="tip-row-two" class="canva-card tip-row flex gap-5 rounded-xl border p-5" style="border-color: rgba(8, 23, 40, 0.12); background: rgb(255, 255, 255);"><span class="tip-number">02</span>
+         <div>
+          <h3 data-template-id="tip-two-title" class="canva-text font-bold" style="color: rgb(8, 23, 40); font-weight: 700; font-style: normal; font-size: 19px;">Ative a verificação em duas etapas</h3>
+          <p data-template-id="tip-two-text" class="canva-text mt-2 leading-7" style="color: rgb(82, 98, 113); font-weight: 400; font-style: normal; font-size: 16px; line-height: 1.65;">Esse recurso cria uma camada extra de proteção, mesmo que alguém descubra sua senha.</p>
+         </div>
+        </article>
+        <article data-template-id="tip-row-three" class="canva-card tip-row flex gap-5 rounded-xl border p-5" style="border-color: rgba(8, 23, 40, 0.12); background: rgb(255, 255, 255);"><span class="tip-number">03</span>
+         <div>
+          <h3 data-template-id="tip-three-title" class="canva-text font-bold" style="color: rgb(8, 23, 40); font-weight: 700; font-style: normal; font-size: 19px;">Desconfie de links urgentes</h3>
+          <p data-template-id="tip-three-text" class="canva-text mt-2 leading-7" style="color: rgb(82, 98, 113); font-weight: 400; font-style: normal; font-size: 16px; line-height: 1.65;">Mensagens com pressão, prêmios ou ameaças podem levar a páginas falsas criadas para roubar dados.</p>
+         </div>
+        </article>
+        <article data-template-id="tip-row-four" class="canva-card tip-row flex gap-5 rounded-xl border p-5" style="border-color: rgba(8, 23, 40, 0.12); background: rgb(255, 255, 255);"><span class="tip-number">04</span>
+         <div>
+          <h3 data-template-id="tip-four-title" class="canva-text font-bold" style="color: rgb(8, 23, 40); font-weight: 700; font-style: normal; font-size: 19px;">Revise as permissões dos aplicativos</h3>
+          <p data-template-id="tip-four-text" class="canva-text mt-2 leading-7" style="color: rgb(82, 98, 113); font-weight: 400; font-style: normal; font-size: 16px; line-height: 1.65;">Permita acesso à câmera, localização e contatos apenas quando isso for realmente necessário.</p>
+         </div>
+        </article>
+        <article data-template-id="tip-row-five" class="canva-card tip-row flex gap-5 rounded-xl border p-5" style="border-color: rgba(8, 23, 40, 0.12); background: rgb(255, 255, 255);"><span class="tip-number">05</span>
+         <div>
+          <h3 data-template-id="tip-five-title" class="canva-text font-bold" style="color: rgb(8, 23, 40); font-weight: 700; font-style: normal; font-size: 19px;">Mantenha dispositivos atualizados</h3>
+          <p data-template-id="tip-five-text" class="canva-text mt-2 leading-7" style="color: rgb(82, 98, 113); font-weight: 400; font-style: normal; font-size: 16px; line-height: 1.65;">Atualizações corrigem falhas conhecidas e ajudam a proteger celular, computador e aplicativos.</p>
+         </div>
+        </article>
+        <article data-template-id="tip-row-six" class="canva-card tip-row flex gap-5 rounded-xl border p-5" style="border-color: rgba(8, 23, 40, 0.12); background: rgb(255, 255, 255);"><span class="tip-number">06</span>
+         <div>
+          <h3 data-template-id="tip-six-title" class="canva-text font-bold" style="color: rgb(8, 23, 40); font-weight: 700; font-style: normal; font-size: 19px;">Pense antes de compartilhar</h3>
+          <p data-template-id="tip-six-text" class="canva-text mt-2 leading-7" style="color: rgb(82, 98, 113); font-weight: 400; font-style: normal; font-size: 16px; line-height: 1.65;">Evite publicar documentos, rotinas, localização em tempo real e outros dados que possam expor você.</p>
+         </div>
+        </article>
+       </div>
+      </div>
+      <aside data-template-id="checklist-panel" class="canva-panel mt-14 rounded-2xl p-7 sm:p-9" style="background: rgb(8, 23, 40);">
+       <div class="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
+        <div>
+         <p data-template-id="checklist-eyebrow" class="canva-text eyebrow mb-3" style="color: rgb(185, 245, 208); font-weight: 700; font-style: normal; font-size: 12px; letter-spacing: 0.08rem;">Checklist rápido</p>
+         <h2 data-template-id="checklist-title" class="canva-text font-bold" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 24px;">Sua privacidade merece atenção contínua.</h2>
+        </div>
+        <div class="grid gap-3 text-sm sm:grid-cols-2">
+         <div data-template-id="checklist-one" class="canva-tag flex items-center gap-2 rounded-lg px-3 py-2.5" style="background: rgb(21, 49, 73); color: rgb(227, 243, 255); font-weight: 600; font-style: normal; font-size: 16px;">Senhas revisadas</div>
+         <div data-template-id="checklist-two" class="canva-tag flex items-center gap-2 rounded-lg px-3 py-2.5" style="background: rgb(21, 49, 73); color: rgb(227, 243, 255); font-weight: 600; font-style: normal; font-size: 16px;">2 etapas ativadas</div>
+         <div data-template-id="checklist-three" class="canva-tag flex items-center gap-2 rounded-lg px-3 py-2.5" style="background: rgb(21, 49, 73); color: rgb(227, 243, 255); font-weight: 600; font-style: normal; font-size: 16px;">Apps conferidos</div>
+         <div data-template-id="checklist-four" class="canva-tag flex items-center gap-2 rounded-lg px-3 py-2.5" style="background: rgb(21, 49, 73); color: rgb(227, 243, 255); font-weight: 600; font-style: normal; font-size: 16px;">Links verificados</div>
+        </div>
+       </div>
+      </aside>
+     </div>
+    </section>
+   </main>
+   <footer class="w-full" style="background:#081728;">
+    <div class="mx-auto max-w-6xl px-5 py-8 text-center sm:px-8">
+     <p data-template-id="footer-text" class="canva-text text-sm" style="color: rgb(169, 189, 204); font-weight: 400; font-style: normal; font-size: 16px;">Informação é uma das melhores ferramentas para proteger a sua vida digital.</p>
+    </div>
+   </footer>
+  </div>
+  <script src="/_sdk/1a0e63f7a958ec3e.editing_sdk.js" integrity="sha512-lW+iibZ5vXaBl3IQ1K3ooQE1gfdDZxiO+Y7NpWdeypLOwr1WIYo3edm3nu+wyePemyM75tcU3yV7YyImK9wxMQ=="></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      lucide.createIcons();
+    });
+  </script>
+ 
+</body></html>
